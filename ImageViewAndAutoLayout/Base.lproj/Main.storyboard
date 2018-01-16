@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G18013" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageViewAndAutoLayout" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +18,87 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCW-Rp-hYh">
+                                <rect key="frame" x="0.0" y="570" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.063321281915820316" green="1" blue="0.26521761684673462" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="karachi">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="BtnKarachi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hVQ-jf-zak"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wd4-hE-Mvj">
+                                <rect key="frame" x="200" y="570" width="200" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Islamabad">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="BtnKarachi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O1I-Jk-cOq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGJ-cP-gcf">
+                                <rect key="frame" x="400" y="570" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.41608586850000001" green="1" blue="0.31084800569999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Peshawar">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="BtnKarachi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KJ7-qP-pn7"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Aib-fM-Mv0">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Wd4-hE-Mvj" secondAttribute="bottom" id="Ai6-tQ-PHd"/>
+                            <constraint firstItem="QCW-Rp-hYh" firstAttribute="width" secondItem="PGJ-cP-gcf" secondAttribute="width" id="EYm-Fx-vcB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QCW-Rp-hYh" secondAttribute="bottom" id="Eax-hH-VV2"/>
+                            <constraint firstItem="Aib-fM-Mv0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="18" id="L6N-Ia-kqp"/>
+                            <constraint firstItem="Aib-fM-Mv0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="148" id="Mnx-u3-iI9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Aib-fM-Mv0" secondAttribute="trailing" constant="18" id="SwX-iX-S7L"/>
+                            <constraint firstItem="PGJ-cP-gcf" firstAttribute="leading" secondItem="Wd4-hE-Mvj" secondAttribute="trailing" id="bS5-bz-Nmh"/>
+                            <constraint firstItem="Wd4-hE-Mvj" firstAttribute="leading" secondItem="QCW-Rp-hYh" secondAttribute="trailing" id="i6U-dk-GNo"/>
+                            <constraint firstItem="QCW-Rp-hYh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="m8b-1S-eDi"/>
+                            <constraint firstItem="Wd4-hE-Mvj" firstAttribute="top" secondItem="Aib-fM-Mv0" secondAttribute="bottom" constant="138" id="sSI-LU-fFQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PGJ-cP-gcf" secondAttribute="bottom" id="xbW-gv-iko"/>
+                            <constraint firstItem="QCW-Rp-hYh" firstAttribute="width" secondItem="Wd4-hE-Mvj" secondAttribute="width" id="z6O-73-ITV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PGJ-cP-gcf" secondAttribute="trailing" constant="-20" id="zjH-eP-G7Z"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Aib-fM-Mv0"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="L6N-Ia-kqp"/>
+                                <exclude reference="Mnx-u3-iI9"/>
+                                <exclude reference="SwX-iX-S7L"/>
+                                <exclude reference="sSI-LU-fFQ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Aib-fM-Mv0"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="L6N-Ia-kqp"/>
+                                <include reference="Mnx-u3-iI9"/>
+                                <include reference="SwX-iX-S7L"/>
+                                <include reference="sSI-LU-fFQ"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="ImageViewOutlet" destination="Aib-fM-Mv0" id="qpa-3L-A7x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="439.5" y="429"/>
         </scene>
     </scenes>
 </document>
